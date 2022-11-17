@@ -85,7 +85,6 @@ const ClimateProvider = ({children}) => {
    conectOpenWeather(search)
     }, [])
     
-
     return(
         <ClimateContext.Provider
                     value={{
