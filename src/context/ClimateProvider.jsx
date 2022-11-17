@@ -14,7 +14,7 @@ const ClimateProvider = ({children}) => {
         useEffect(() => {
                 const callNewsAPI = async () => {
                         const APINews = '42567f8637594bd79b8a26e6193f8bbf'
-                        const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${APINews}`
+                        const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=42567f8637594bd79b8a26e6193f8bbf`
                         const {data:data3} = await axios(url)
                         setNews(data3.articles)
                         setTotalNews(data3.totalResults)
@@ -26,7 +26,7 @@ const ClimateProvider = ({children}) => {
         useEffect(() => {
                 const callNewsAPI = async () => {
                         const APINews = '42567f8637594bd79b8a26e6193f8bbf'
-                        const url = `https://newsapi.org/v2/top-headlines?country=us&page=${page}&category=${category}&apiKey=${APINews}`
+                        const url = `https://newsapi.org/v2/top-headlines?country=us&page=${page}&category=${category}&apiKey=42567f8637594bd79b8a26e6193f8bbf`
                         const {data:data3} = await axios(url)
                         setNews(data3.articles)
                         setTotalNews(data3.totalResults)
