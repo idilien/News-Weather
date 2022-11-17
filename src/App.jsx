@@ -14,11 +14,11 @@ function App() {
           
           <ClimateProvider>     
               <Header/>
-              <div className="app-container">
+             
               <AppWeather/>
               <FormNews/>    
               <ListNews/>        
-              </div>
+             
           </ClimateProvider>
           
 

@@ -13,8 +13,8 @@ const ClimateProvider = ({children}) => {
        
         useEffect(() => {
                 const callNewsAPI = async () => {
-                        const APINews = '42567f8637594bd79b8a26e6193f8bbf'
-                        const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=42567f8637594bd79b8a26e6193f8bbf`
+                        const APINews = import.meta.env.VITE_API_NEW
+                        const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${APINews}`
                         const {data:data3} = await axios(url)
                         setNews(data3.articles)
                         setTotalNews(data3.totalResults)
@@ -25,8 +25,8 @@ const ClimateProvider = ({children}) => {
 
         useEffect(() => {
                 const callNewsAPI = async () => {
-                        const APINews = '42567f8637594bd79b8a26e6193f8bbf'
-                        const url = `https://newsapi.org/v2/top-headlines?country=us&page=${page}&category=${category}&apiKey=42567f8637594bd79b8a26e6193f8bbf`
+                        const APINews = import.meta.env.VITE_API_NEW
+                        const url = `https://newsapi.org/v2/top-headlines?country=us&page=${page}&category=${category}&apiKey=${APINews}`
                         const {data:data3} = await axios(url)
                         setNews(data3.articles)
                         setTotalNews(data3.totalResults)
@@ -67,8 +67,7 @@ const ClimateProvider = ({children}) => {
             setFailResult(false)
         try {
             const {city, country} = datas
-            // const APIKey =  import.meta.env.VITE_API_KEY
-            const APIKey = 'ab7db55730149085fcf5fd976b30dec9'
+            const APIKey =  import.meta.env.VITE_API_KEY
             const url = `https://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&limit=1&appid=${APIKey}`
             const {data} = await axios(url)
             const {lat, lon} = data[0]

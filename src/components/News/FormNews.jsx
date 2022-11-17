@@ -22,34 +22,36 @@ const categories = [
 ]
 
   return (
-       <>
-    <Grid 
-        container
-        justifyContent="center"
-    >
-      <Grid item xs={10} md={6} lg={4}>
-        <form >
-            <FormControl fullWidth>
-              <InputLabel>Category</InputLabel>
-                  <Select 
-                            label ="category"
-                            onChange={handleChangeCategory}
-                            value={category}
-                            >
-                      {categories.map(cat => (
-                        <MenuItem
-                        key={cat.value}
-                        value={cat.value}
-                        >
-                            {cat.label}
-                        </MenuItem>
-                      ))}
-                  </Select>
-            </FormControl>
-         </form>
-          </Grid>
-      </Grid>
-      </>
+  <>
+    <div className=' formNews'>
+        <Grid 
+          container
+          justifyContent="center"
+          >
+        <Grid item xs={10} md={6} lg={4}>
+          <form >
+              <FormControl fullWidth>
+                <InputLabel>Category</InputLabel>
+                    <Select 
+                              label ="category"
+                              onChange={handleChangeCategory}
+                              value={category}
+                              >
+                        {categories.map(cat => (
+                          <MenuItem
+                          key={cat.value}
+                          value={cat.value}
+                          >
+                              {cat.label}
+                          </MenuItem>
+                        ))}
+                    </Select>
+              </FormControl>
+          </form>
+            </Grid>
+        </Grid>
+    </div>
+  </>
   )
 }
 
