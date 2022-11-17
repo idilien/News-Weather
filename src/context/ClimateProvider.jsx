@@ -71,7 +71,7 @@ const ClimateProvider = ({children}) => {
             const {city, country} = datas
             // const APIKey =  import.meta.env.VITE_API_KEY
             const APIKey = 'ab7db55730149085fcf5fd976b30dec9'
-            const url = `http://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&limit=1&appid=${APIKey}`
+            const url = `https://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&limit=1&appid=${APIKey}`
             const {data} = await axios(url)
             const {lat, lon} = data[0]
             const urlData = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKey}&units=metric`
