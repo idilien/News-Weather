@@ -9,7 +9,6 @@ const ListNews = () => {
 
   const {news, totalNews, handleChangePage, page} = useClimate()
   const totalPages = Math.ceil( totalNews /  20)
-  console.log(totalPages)
   
   return (
    <>
