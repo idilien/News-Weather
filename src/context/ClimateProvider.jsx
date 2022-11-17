@@ -65,7 +65,6 @@ const ClimateProvider = ({children}) => {
     const conectOpenWeather = async datas => {
             setSpinner(true)
             setFailResult(false)
-
         try {
             const {city, country} = datas
             const APIKey =  import.meta.env.VITE_API_KEY
@@ -81,6 +80,11 @@ const ClimateProvider = ({children}) => {
             setSpinner(false)
         }
     }
+
+    useEffect(() => {
+   conectOpenWeather(search)
+    }, [])
+    
 
     return(
         <ClimateContext.Provider
